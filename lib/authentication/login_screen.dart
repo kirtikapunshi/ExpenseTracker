@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../user_provider.dart';
-import 'logbar.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -14,7 +13,7 @@ class LoginScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: myAppBar(),
+
       body: Center(
         child: SingleChildScrollView(
           child: Padding(

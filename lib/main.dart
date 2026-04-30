@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
 
-          initialRoute: '/splash',
+          initialRoute: '/',
 
           routes: {
-            '/login': (context) => LoginScreen(),
+            '/': (context) => LoginScreen(),
             '/signup': (context) => SignupScreen(),
             '/home': (context) => HomeScreen(),
             '/addExpense': (context) => const AddEditScreen(),
