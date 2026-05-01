@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// =======================
 /// MODEL
-/// =======================
 class Expense {
   final String title;
   final double amount;
@@ -13,9 +11,7 @@ class Expense {
   });
 }
 
-/// =======================
 /// PROVIDER
-/// =======================
 class ExpenseProvider extends InheritedWidget {
   final List<Expense> expenses;
 
@@ -58,9 +54,7 @@ class ExpenseProvider extends InheritedWidget {
   }
 }
 
-/// =======================
 /// STORE
-/// =======================
 class ExpenseStore extends StatefulWidget {
   final Widget child;
 
@@ -82,7 +76,7 @@ class _ExpenseStoreState extends State<ExpenseStore> {
     });
   }
 
-  /// ❌ DELETE (SAFE)
+  /// DELETE (SAFE)
   void _deleteExpense(int index) {
     if (index < 0 || index >= _expenses.length) return;
 
@@ -91,7 +85,7 @@ class _ExpenseStoreState extends State<ExpenseStore> {
     });
   }
 
-  /// ✏️ UPDATE (SAFE)
+  ///  UPDATE (SAFE)
   void _updateExpense(int index, String title, double amount) {
     if (index < 0 || index >= _expenses.length) return;
 
@@ -103,7 +97,7 @@ class _ExpenseStoreState extends State<ExpenseStore> {
     });
   }
 
-  /// 👆 SELECT (FOR DETAIL SCREEN)
+  ///  SELECT (FOR DETAIL SCREEN)
   void _selectExpense(int index) {
     if (index < 0 || index >= _expenses.length) return;
 
@@ -112,7 +106,7 @@ class _ExpenseStoreState extends State<ExpenseStore> {
     });
   }
 
-  /// 💰 TOTAL
+  ///  TOTAL
   double get _total =>
       _expenses.fold(0, (sum, item) => sum + item.amount);
 
