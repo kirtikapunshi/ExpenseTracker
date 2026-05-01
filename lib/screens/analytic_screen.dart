@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import '../ExpenseProvider.dart';
-import '../main_screen.dart'; // IMPORT
+import '../main_screen.dart'; //IMPORT
 
 class AnalyticsScreen extends StatelessWidget {
   const AnalyticsScreen({super.key});
