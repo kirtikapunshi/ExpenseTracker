@@ -16,7 +16,7 @@ class MainScaffold extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F6FA),
 
-      // ✅ COMMON APP BAR
+      // COMMON APP BAR
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
@@ -33,7 +33,7 @@ class MainScaffold extends StatelessWidget {
         ],
       ),
 
-      // ✅ COMMON DRAWER
+      // COMMON DRAWER
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -71,12 +71,12 @@ class MainScaffold extends StatelessWidget {
         ),
       ),
 
-      // ✅ SCREEN BODY
+      // SCREEN BODY
       body: body,
     );
   }
 
-  // 🔁 Drawer item builder
+  // Drawer item builder
   Widget buildDrawerItem(
       BuildContext context,
       IconData icon,
