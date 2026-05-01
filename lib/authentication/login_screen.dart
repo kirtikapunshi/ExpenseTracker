@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
 
-                // 🔵 TITLE
+                // TITLE
                 const Text(
                   "Welcome Back 👋",
                   textAlign: TextAlign.center,
@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
 
                 const SizedBox(height: 30),
 
-                // 📧 EMAIL
+                // EMAIL
                 TextField(
                   controller: emailController,
                   decoration: InputDecoration(
@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
 
                 const SizedBox(height: 15),
 
-                // 🔒 PASSWORD
+                // PASSWORD
                 TextField(
                   controller: passwordController,
                   obscureText: true,
@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
 
                 const SizedBox(height: 25),
 
-                // 🔵 LOGIN BUTTON
+                // LOGIN BUTTON
                 SizedBox(
                   height: 50,
                   child: ElevatedButton(
@@ -116,7 +116,7 @@ class LoginScreen extends StatelessWidget {
 
                 const SizedBox(height: 15),
 
-                // 🔗 SIGNUP LINK
+                // SIGNUP LINK
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
