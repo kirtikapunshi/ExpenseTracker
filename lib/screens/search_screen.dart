@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../ExpenseProvider.dart';
-import '../main_screen.dart'; // ✅ IMPORT
+import '../main_screen.dart'; //IMPORT
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -24,7 +24,7 @@ class _SearchScreenState extends State<SearchScreen> {
     return MainScaffold(
       title: "Search Expenses",
 
-      // 🔥 Recommended: cleaner UX (no drawer while typing)
+      // Recommended: cleaner UX (no drawer while typing)
       // showDrawer: false,
 
       body: Column(
@@ -49,7 +49,7 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ),
 
-          // 📋 RESULTS
+          //RESULTS
           Expanded(
             child: filteredList.isEmpty
                 ? const Center(
