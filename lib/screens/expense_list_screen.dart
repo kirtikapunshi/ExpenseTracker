@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../ExpenseProvider.dart';
-import '../main_screen.dart'; // ✅ IMPORT
+import '../main_screen.dart'; // IMPORT
 
 class ExpenseListScreen extends StatefulWidget {
   const ExpenseListScreen({super.key});
@@ -47,7 +47,7 @@ class _ExpenseListScreenState extends State<ExpenseListScreen> {
             ),
 
             child: ListTile(
-              // 🎯 ICON
+              // ICON
               leading: CircleAvatar(
                 backgroundColor: Colors.blue.shade100,
                 child: const Icon(
@@ -57,24 +57,24 @@ class _ExpenseListScreenState extends State<ExpenseListScreen> {
                 ),
               ),
 
-              // 📌 TITLE
+              // TITLE
               title: Text(
                 expense.title,
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
 
-              // 💰 AMOUNT
+              // AMOUNT
               subtitle: Text(
                 "Rs ${expense.amount}",
                 style: TextStyle(color: Colors.grey[700]),
               ),
 
-              // ✏️ + ❌ ACTIONS
+              //  ACTIONS
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
 
-                  // ✏️ EDIT
+                  //  EDIT
                   IconButton(
                     icon: const Icon(Icons.edit, color: Colors.orange),
                     onPressed: () {
@@ -100,7 +100,7 @@ class _ExpenseListScreenState extends State<ExpenseListScreen> {
                 ],
               ),
 
-              // 👇 OPEN DETAIL
+              //OPEN DETAIL
               onTap: () {
                 expenseProvider.selectExpense(index);
                 Navigator.pushNamed(context, '/expense-detail');
