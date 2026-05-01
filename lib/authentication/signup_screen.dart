@@ -37,7 +37,7 @@ class SignupScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
 
-              // 🔵 TITLE
+              // TITLE
               const Text(
                 "Create Account",
                 style: TextStyle(
@@ -56,7 +56,7 @@ class SignupScreen extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              // 👤 USERNAME
+              // USERNAME
               TextField(
                 controller: usernameController,
                 decoration: InputDecoration(
@@ -72,7 +72,7 @@ class SignupScreen extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // 📧 EMAIL
+              // EMAIL
               TextField(
                 controller: emailController,
                 decoration: InputDecoration(
@@ -88,7 +88,7 @@ class SignupScreen extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // 🔒 PASSWORD
+              // PASSWORD
               TextField(
                 controller: passwordController,
                 obscureText: true,
@@ -105,7 +105,7 @@ class SignupScreen extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              // 🔵 SIGNUP BUTTON
+              // SIGNUP BUTTON
               SizedBox(
                 width: double.infinity,
                 height: 50,
@@ -119,7 +119,7 @@ class SignupScreen extends StatelessWidget {
 
                   onPressed: () {
 
-                    // ✅ SAME LOGIC (UNCHANGED)
+                    //  SAME LOGIC (UNCHANGED)
                     provider.registerUser(
                       UserData(
                         username: usernameController.text,
@@ -147,7 +147,7 @@ class SignupScreen extends StatelessWidget {
 
               const SizedBox(height: 15),
 
-              // 🔗 LOGIN LINK
+              // LOGIN LINK
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
