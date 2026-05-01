@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// ==========================
+
 /// USER MODEL
-/// ==========================
 class UserData {
   final String username;
   final String email;
@@ -31,9 +30,8 @@ class UserData {
   }
 }
 
-/// ==========================
-/// INHERITED WIDGET (STATE ACCESS)
-/// ==========================
+
+/// INHERITED WIDGET 
 class UserProvider extends InheritedWidget {
   final UserData? user;
 
@@ -69,9 +67,8 @@ class UserProvider extends InheritedWidget {
   }
 }
 
-/// ==========================
 /// STATE CONTAINER (LOGIC + RBAC)
-/// ==========================
+
 class UserStore extends StatefulWidget {
   final Widget child;
 
@@ -84,9 +81,8 @@ class UserStore extends StatefulWidget {
 class _UserStoreState extends State<UserStore> {
   UserData? _user;
 
-  /// --------------------------
+
   /// ADMIN ACCOUNT (RBAC BASE)
-  /// --------------------------
   final UserData _admin = UserData(
     username: "Admin",
     email: "admin@gmail.com",
@@ -97,9 +93,7 @@ class _UserStoreState extends State<UserStore> {
   /// normal users list
   final List<UserData> _users = [];
 
-  /// ==========================
   /// REGISTER (DEFAULT ROLE = USER)
-  /// ==========================
   void _register(UserData user) {
     final newUser = user.copyWith(role: "user");
 
@@ -109,11 +103,9 @@ class _UserStoreState extends State<UserStore> {
     });
   }
 
-  /// ==========================
   /// LOGIN (RBAC LOGIC)
-  /// ==========================
   void _login(String email, String password) {
-    // 🔐 ADMIN CHECK FIRST
+    //  ADMIN CHECK FIRST
     if (email == _admin.email && password == _admin.password) {
       setState(() {
         _user = _admin;
@@ -121,7 +113,7 @@ class _UserStoreState extends State<UserStore> {
       return;
     }
 
-    // 🔍 NORMAL USER CHECK
+    //  NORMAL USER CHECK
     final matchedUser = _users.where(
           (u) => u.email == email && u.password == password,
     );
@@ -137,18 +129,14 @@ class _UserStoreState extends State<UserStore> {
     }
   }
 
-  /// ==========================
   /// LOGOUT
-  /// ==========================
   void _logout() {
     setState(() {
       _user = null;
     });
   }
 
-  /// ==========================
   /// RBAC HELPERS
-  /// ==========================
   bool get isLoggedIn => _user != null;
 
   bool get isAdmin => _user?.role == "admin";
