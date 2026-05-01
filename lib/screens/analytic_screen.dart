@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import '../ExpenseProvider.dart';
-import '../main_screen.dart'; // ✅ IMPORT
+import '../main_screen.dart'; // IMPORT
 
 class AnalyticsScreen extends StatelessWidget {
   const AnalyticsScreen({super.key});
@@ -11,11 +11,11 @@ class AnalyticsScreen extends StatelessWidget {
     final provider = ExpenseProvider.of(context);
     final expenses = provider.expenses;
 
-    // 💰 TOTAL CALCULATION
+    //  TOTAL CALCULATION
     final double total =
     expenses.fold(0, (sum, item) => sum + item.amount);
 
-    // 🎨 COLORS
+    //  COLORS
     final colors = [
       Colors.blue,
       Colors.green,
@@ -24,7 +24,7 @@ class AnalyticsScreen extends StatelessWidget {
     ];
 
     return MainScaffold(
-      title: "Analytics", // ✅ Shared AppBar
+      title: "Analytics", // Shared AppBar
 
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -32,7 +32,7 @@ class AnalyticsScreen extends StatelessWidget {
         child: Column(
           children: [
 
-            // 📊 TOTAL CARD
+            // TOTAL CARD
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -73,7 +73,7 @@ class AnalyticsScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // 📊 PIE CHART
+            //  PIE CHART
             SizedBox(
               height: 250,
               child: expenses.isEmpty
@@ -100,7 +100,7 @@ class AnalyticsScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // 📋 LIST
+            // LIST
             Expanded(
               child: expenses.isEmpty
                   ? const Center(child: Text("No expenses found"))
