@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../ExpenseProvider.dart';
-import '../main_screen.dart'; // ✅ IMPORT
+import '../main_screen.dart'; // IMPORT
 
 class ExpenseDetailScreen extends StatelessWidget {
   const ExpenseDetailScreen({super.key});
@@ -13,7 +13,7 @@ class ExpenseDetailScreen extends StatelessWidget {
     return MainScaffold(
       title: "Expense Detail",
 
-      // ❗ Optional: better UX (no drawer on detail page)
+      // Optional: better UX (no drawer on detail page)
       // showDrawer: false,
 
       body: index == null
@@ -31,7 +31,7 @@ class ExpenseDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            // 📦 MAIN CARD
+            // MAIN CARD
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(25),
@@ -80,7 +80,7 @@ class ExpenseDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            // 📊 INFO BOX
+            //  INFO BOX
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
