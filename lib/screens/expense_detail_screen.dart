@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../ExpenseProvider.dart';
-import '../main_screen.dart'; // IMPORT
+import '../main_screen.dart'; //IMPORT
 
 class ExpenseDetailScreen extends StatelessWidget {
   const ExpenseDetailScreen({super.key});
