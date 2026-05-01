@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../ExpenseProvider.dart';
-import '../main_screen.dart'; // ✅ IMPORT THIS
+import '../main_screen.dart'; // IMPORT THIS
 
 class AddEditScreen extends StatefulWidget {
   final Expense? expense;
@@ -35,7 +35,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
     final isEdit = widget.expense != null;
 
     return MainScaffold(
-      title: isEdit ? "Edit Expense" : "Add Expense", // ✅ dynamic title
+      title: isEdit ? "Edit Expense" : "Add Expense", //  dynamic title
 
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -54,7 +54,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
 
             const SizedBox(height: 15),
 
-            // 💰 AMOUNT
+            //  AMOUNT
             TextField(
               controller: amountController,
               keyboardType: TextInputType.number,
@@ -66,7 +66,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
 
             const SizedBox(height: 25),
 
-            // 💾 SAVE BUTTON
+            // SAVE BUTTON
             SizedBox(
               width: double.infinity,
               height: 50,
@@ -75,7 +75,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
                   final title = titleController.text.trim();
                   final amountText = amountController.text.trim();
 
-                  // ❌ VALIDATION
+                  // VALIDATION
                   if (title.isEmpty || amountText.isEmpty) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
@@ -106,7 +106,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
                     expenseProvider.addExpense(title, amount);
                   }
 
-                  // ✅ SUCCESS
+                  // SUCCESS
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
