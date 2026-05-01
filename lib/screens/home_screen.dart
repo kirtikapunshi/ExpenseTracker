@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            // 👋 HEADER CARD
+            // HEADER CARD
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(18),
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // 💰 TOTAL CARD
+            //TOTAL CARD
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
