@@ -10,7 +10,7 @@ class MainScaffold extends StatelessWidget {
     required this.title,
     required this.body,
   });
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
