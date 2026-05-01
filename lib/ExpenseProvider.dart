@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// MODEL
+// MODEL
 class Expense {
   final String title;
   final double amount;
